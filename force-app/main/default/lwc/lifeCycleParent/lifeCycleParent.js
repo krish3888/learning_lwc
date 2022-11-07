@@ -19,5 +19,9 @@ export default class LifeCycleParent extends LightningElement {
     parentChangeHandler(event){
         this.name = event.target.value;
     }
-    
+
+    isChildVisible = false;
+    handleClick(event){
+        this.isChildVisible = !this.isChildVisible;
+    }
 }

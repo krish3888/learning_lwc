@@ -15,6 +15,11 @@ export default class LifecycleChild extends LightningElement {
         console.log('Child renderedCallback() is called')
     }
 
+    disconnectedCallback(){
+        console.log('Child component disconnected---')
+        alert('Child component disconnectred')
+    }
+
     childname;
     childChangeHandler(event){
         this.childname = event.target.value;
