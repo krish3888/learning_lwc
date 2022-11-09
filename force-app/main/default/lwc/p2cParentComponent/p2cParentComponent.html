@@ -1,5 +1,17 @@
 <template>
-    <c-p2c-alert-component c-message={p_msg} card-heading={p_cardHeading} number=20 is-valid=false></c-p2c-alert-component>
+    <!--Example of simple data -->
+    <c-p2c-alert-component c-message={p_msg} 
+        card-heading={p_cardHeading} number=20 is-valid=false>
+    </c-p2c-alert-component>
     <div class="slds-var-m-bottom_medium"></div>
+    <!--Example of complex data -->
     <c-p2c-carousel-component carousel-details={carouselData}></c-p2c-carousel-component>
+    <div class="slds-var-m-bottom_medium"></div>
+    <!--Example of passing data on action -->
+    <lightning-card title="Parent to child communication on Action">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="number" onkeyup ={handleInput} value={inputScore} label="Enter Percentage"></lightning-input>
+        </div>
+    </lightning-card>
+    <c-p2c-progress-component bar-score={inputScore}></c-p2c-progress-component>
 </template>

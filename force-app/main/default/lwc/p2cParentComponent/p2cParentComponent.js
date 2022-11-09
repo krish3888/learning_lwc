@@ -14,4 +14,9 @@ export default class P2cParentComponent extends LightningElement {
         header:  "Third Card",
         description:  "Third description."}
     ]
+    inputScore=10
+    handleInput(event){
+        this.inputScore = event.target.value
+    }
+    
 }
