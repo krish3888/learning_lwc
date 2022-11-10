@@ -7,6 +7,9 @@
                     onclose={closeHandler}
                 ></c-c2p-modal-component>
             </template>
+            <template if:true={showToast}>
+                <div class="slds-notify_toast slds-theme_success" role="status">{message}</div>
+            </template>
         </div>
     </lightning-card>
 </template>
